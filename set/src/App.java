@@ -11,6 +11,7 @@ public class App {
         game.setVisible(true);
         game.setSize(WIDTH, HEIGHT);
         game.setLayout(new java.awt.GridLayout(3, 4, 10, 10));
+        game.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         Gamemaster gamemaster = new Gamemaster(game);
 

@@ -1,6 +1,6 @@
 import javax.swing.*;
 
-public class Gamemaster {
+public class Gamemaster implements CardSelectionHandler {
     private JFrame frame;
     private Board board;
     private Deck deck;
@@ -12,6 +12,16 @@ public class Gamemaster {
     public Gamemaster(JFrame frame) {
         this.frame = frame;
         this.deck = new Deck();
-        this.board = new Board(this.deck, this.frame);
+        this.board = new Board(this.deck, this.frame, this);
+    }
+
+    @Override
+    public void cardSelected(Card card) {
+        System.out.println("selected!" + card);
+    }
+
+    @Override
+    public void cardDeselected(Card card) {
+        System.out.println("unselectd!");
     }
 }

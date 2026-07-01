@@ -8,6 +8,8 @@ public class Card {
 
     private int position;
 
+    private JToggleButton button = null;
+
     public Card(int card_count, int card_shape, int card_shade, int card_color) {
         this.count = card_count;
         this.shape = card_shape;
@@ -33,4 +35,9 @@ public class Card {
     public String toString() {
         return String.valueOf(count) + String.valueOf(shape) + String.valueOf(shade) + String.valueOf(color);
     }
+
+    public void setButton(JToggleButton button) {
+        this.button = button;
+    }
+
 }
